@@ -9,7 +9,7 @@
 </head>
 <body class="page">
     <div class="page__bd">
-        <div class="weui-cells__title">名片信息</div>
+        <div class="weui-cells__title">个人信息</div>
         <div class="weui-cells weui-cells_form">
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">您的姓氏</label></div>
@@ -36,43 +36,54 @@
                 </div>
             </div>
             <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">公司组织</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" placeholder="请输入公司信息" id="company" maxlength="20">
-                </div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">职称备注</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" placeholder="请输入职称" id="title" maxlength="20">
-                </div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">家庭住址</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" placeholder="请输入家庭住址" id="address" maxlength="30">
-                </div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">个人网址</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="text" placeholder="请输入个人网站" id="website" maxlength="40">
-                </div>
-            </div>
-            <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">电子邮箱</label></div>
                 <div class="weui-cell__bd">
                     <input class="weui-input" type="text" placeholder="请输入电子邮箱" id="email" maxlength="40">
                 </div>
             </div>
-            <div class="weui-cell">
+		</div>
+        <div class="weui-cells__tips">姓名必填，电话至少填写一个</div>
+		
+        <div class="weui-cells__title">更多信息</div>
+        <div class="weui-cells weui-cells_form">
+
+            <div class="weui-cell weui-cell_switch">
+                <div class="weui-cell__bd">更多信息</div>
+                <div class="weui-cell__ft">
+                    <input class="weui-switch userswitch" type="checkbox" id="moreinfo" data-target=".moreinfo">
+                </div>
+            </div>
+            <div class="weui-cell moreinfo hide">
+                <div class="weui-cell__hd"><label class="weui-label">公司组织</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入公司信息" id="company" maxlength="20">
+                </div>
+            </div>
+            <div class="weui-cell moreinfo hide">
+                <div class="weui-cell__hd"><label class="weui-label">职称备注</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入职称" id="title" maxlength="20">
+                </div>
+            </div>
+            <div class="weui-cell moreinfo hide">
+                <div class="weui-cell__hd"><label class="weui-label">家庭住址</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入家庭住址" id="address" maxlength="30">
+                </div>
+            </div>
+            <div class="weui-cell moreinfo hide">
+                <div class="weui-cell__hd"><label class="weui-label">个人网址</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入个人网站" id="website" maxlength="40">
+                </div>
+            </div>
+            <div class="weui-cell moreinfo hide">
                 <div class="weui-cell__hd"><label for="" class="weui-label">生日信息</label></div>
                 <div class="weui-cell__bd">
                     <input class="weui-input" type="date" id="birthday">
                 </div>
             </div>
         </div>
-        <div class="weui-cells__tips">姓名必填，电话至少填写一个</div>
         <div class="weui-cells__title">二维码样式</div>
         <div class="weui-cells weui-cells_form">
             <div class="weui-cell weui-cell_switch">
@@ -81,33 +92,30 @@
                     <input class="weui-switch" type="checkbox" id="fillet">
                 </div>
             </div>
+            <div class="weui-cell weui-cell_select weui-cell_select-after" style="color:#111">
+                <div class="weui-cell__hd"><label for="" class="weui-label">二维码颜色</label></div>
+                <div class="weui-cell__bd"><select class="weui-select colorselect" id="color"><option value="#111" selected="selected">黑色</option><option value="#001F3F">深蓝色</option><option value="#0074D9">蓝色</option><option value="#7FDBFF">浅绿色</option><option value="#39CCCC">蓝绿色</option><option value="#3D9970">橄榄色</option><option value="#2ECC40">绿色</option><option value="#01FF70">石灰色</option><option value="#FFDC00">黄色</option><option value="#FF851B">橙色</option><option value="#FF4136">红色</option><option value="#F012BE">紫红色</option><option value="#B10DC9">紫色</option><option value="#85144B">栗色</option></select></div>
+            </div>
+            <div class="weui-cell weui-cell_select weui-cell_select-after" style="color:#111">
+                <div class="weui-cell__hd"><label for="" class="weui-label">二维码背景</label></div>
+                <div class="weui-cell__bd"><select class="weui-select colorselect" id="bgcolor"><option value="" selected="selected">透明</option><option value="#fff">白色</option><option value="#ddd">银色</option><option value="#aaa">灰色</option></select></div>
+            </div>
             <div class="weui-cell weui-cell_switch">
                 <div class="weui-cell__bd">添加签名</div>
                 <div class="weui-cell__ft">
-                    <input class="weui-switch" type="checkbox" id="signswitch">
+                    <input class="weui-switch userswitch" type="checkbox" id="signbox" data-target=".signbox">
                 </div>
             </div>
-        </div>
-
-        <div class="weui-cells__title">颜色设置</div>
-        <div class="weui-cells">
-            <div class="weui-cell weui-cell_select weui-cell_select-after signbox hide" style="color:#181818">
+            <div class="weui-cell weui-cell_select weui-cell_select-after signbox hide" style="color:#111">
                 <div class="weui-cell__hd"><label for="" class="weui-label">签名颜色</label></div>
-                <div class="weui-cell__bd"><select class="weui-select colorselect" id="signcolor"><option value="#111111" selected="selected">黑色</option><option value="#001F3F">深蓝色</option><option value="#0074D9">蓝色</option><option value="#7FDBFF">浅绿色</option><option value="#39CCCC">蓝绿色</option><option value="#3D9970">橄榄色</option><option value="#2ECC40">绿色</option><option value="#01FF70">石灰色</option><option value="#FFDC00">黄色</option><option value="#FF851B">橙色</option><option value="#FF4136">红色</option><option value="#F012BE">紫红色</option><option value="#B10DC9">紫色</option><option value="#85144B">栗色</option></select></div>
+                <div class="weui-cell__bd"><select class="weui-select colorselect" id="signcolor"><option value="#111" selected="selected">黑色</option><option value="#001F3F">深蓝色</option><option value="#0074D9">蓝色</option><option value="#7FDBFF">浅绿色</option><option value="#39CCCC">蓝绿色</option><option value="#3D9970">橄榄色</option><option value="#2ECC40">绿色</option><option value="#01FF70">石灰色</option><option value="#FFDC00">黄色</option><option value="#FF851B">橙色</option><option value="#FF4136">红色</option><option value="#F012BE">紫红色</option><option value="#B10DC9">紫色</option><option value="#85144B">栗色</option></select></div>
             </div>
             <div class="weui-cell signbox hide">
                 <div class="weui-cell__hd"><label class="weui-label">二维码签名</label></div>
                 <div class="weui-cell__bd"><input class="weui-input" type="text" placeholder="请输入签名" id="sign" maxlength="20"></div>
             </div>
-            <div class="weui-cell weui-cell_select weui-cell_select-after" style="color:#181818">
-                <div class="weui-cell__hd"><label for="" class="weui-label">二维码颜色</label></div>
-                <div class="weui-cell__bd"><select class="weui-select colorselect" id="color"><option value="#111111" selected="selected">黑色</option><option value="#001F3F">深蓝色</option><option value="#0074D9">蓝色</option><option value="#7FDBFF">浅绿色</option><option value="#39CCCC">蓝绿色</option><option value="#3D9970">橄榄色</option><option value="#2ECC40">绿色</option><option value="#01FF70">石灰色</option><option value="#FFDC00">黄色</option><option value="#FF851B">橙色</option><option value="#FF4136">红色</option><option value="#F012BE">紫红色</option><option value="#B10DC9">紫色</option><option value="#85144B">栗色</option></select></div>
-            </div>
-            <div class="weui-cell weui-cell_select weui-cell_select-after" style="color:#181818">
-                <div class="weui-cell__hd"><label for="" class="weui-label">二维码背景</label></div>
-                <div class="weui-cell__bd"><select class="weui-select colorselect" id="bgcolor"><option value="#FFFFFF" selected="selected">白色</option><option value="#DDDDDD">银色</option><option value="#AAAAAA">灰色</option></select></div>
-            </div>
         </div>
+        <div class="weui-cells__tips">移动设备飞行模式断网也可以生成二维码<br>我们不收集您的任何信息</div>
         <!-- 生成按钮 -->
         <div class="weui-btn-area">
             <a class="weui-btn weui-btn_primary" href="javascript:" id="createQrcode">生成二维码</a>
@@ -132,40 +140,45 @@
     <script type="text/javascript" src="qrcode.js"></script>
     <script type="text/javascript" src="alert.js"></script>
     <script type="text/javascript">
-    var ua = navigator.userAgent,wx = /MicroMessenger/i.test(ua),ios = /iphone|ipod|ipad/i.test(ua)
+    	var ua = navigator.userAgent,wx = /MicroMessenger/i.test(ua),ios = /iphone|ipod|ipad/i.test(ua),win = $(window),body=$('body');
         $(function(){
-            ios||$('#qrcode').replaceWith('<div id="qrcode"></div>');
+            wx&&ios||$('#qrcode').replaceWith('<div id="qrcode"></div>');
             $('.colorselect').on('change',function(){
                 var color = this.value;
-                $(this).parents('.weui-cell').addBack().css('color',color=='#FFFFFF'?'#000000':color);
-            })
-            $('#signtype').on('change',function(){
-                $('.signbox').addClass('hide');
-                $('.'+this.value).removeClass('hide');
+                $(this).parents('.weui-cell').addBack().css('color',color=='#fff'?'#000':color);
             })
             $('#signswitch').on('click',function(){
                 $('.signbox')[this.checked?'removeClass':'addClass']('hide');
             })
+            $('.userswitch').on('click',function(){
+            	var _this = $(this);
+                $(_this.data('target'))[_this.prop('checked')?'removeClass':'addClass']('hide');
+            })
             $('#createQrcode').on('click',function(){
-                var lname = $('#lname').val(),fname=$('#fname').val(),mob=$('#mob').val(),tel=$('#tel').val(),company=$('#company').val(),title=$('#title').val(),address=$('#address').val(),website=$('#website').val(),email=$('#email').val(),birthday=$('#birthday').val(),sign = $('#sign').val(),color=$('#color').val(),bgcolor=$('#bgcolor').val();
+                var lname = $('#lname').val(),fname=$('#fname').val(),mob=$('#mob').val(),tel=$('#tel').val(),email=$('#email').val(),color=$('#color').val(),bgcolor=$('#bgcolor').val();
+                bgcolor = bgcolor||null;
                 if(lname&&fname){
                     if(mob||tel){
                         var vcf = 'BEGIN:VCARD\r\nN:'+lname+';'+fname+';;;\r\nFN: '+fname+'  '+lname;
-                        if(title) vcf+='\r\nTITLE:'+title;
-                        if(address) vcf+='\r\nADR;HOME:;;'+address+';;;;';
-                        if(company) vcf+='\r\nORG:'+company;
                         if(mob) vcf+='\r\nTEL;CELL,VOICE:'+mob;
                         if(tel) vcf+='\r\nTEL;HOME,VOICE:'+tel;
-                        if(website) vcf+='\r\nURL;WORK:'+website;
                         if(email) vcf+='\r\nEMAIL;INTERNET,HOME:'+email;
-                        if(birthday) vcf+='\r\nBDAY:'+birthday;
+                        if($('#moreinfo').prop('checked')){
+                        	var company=$('#company').val(),title=$('#title').val(),address=$('#address').val(),website=$('#website').val(),birthday=$('#birthday').val();
+                            if(title) vcf+='\r\nTITLE:'+title;
+                            if(company) vcf+='\r\nORG:'+company;
+                            if(address) vcf+='\r\nADR;HOME:;;'+address+';;;;';
+                            if(website) vcf+='\r\nURL;WORK:'+website;
+                            if(birthday) vcf+='\r\nBDAY:'+birthday;
+                        }
                         vcf+='\r\nEND:VCARD';
                         var opt = {render:'image',size:1000,fill:color,radius:$('#fillet').prop('checked')?.5:0,background:bgcolor,text:vcf}
-                        $('#signswitch').prop('checked')&&sign&&(opt = $.extend(opt,{ecLevel:'H',label:sign,mode:2,fontname:'Lantinghei SC,PingFang SC,Open Sans,Arial,Hiragino Sans GB,Microsoft YaHei,STHeiti,WenQuanYi Micro Hei,SimSun, sans-serif',fontcolor:$('#signcolor').val()}))
+                        var sign = $('#sign').val();
+                        $('#signbox').prop('checked')&&sign&&(opt = $.extend(opt,{ecLevel:'H',label:sign,mode:2,fontname:'Lantinghei SC,PingFang SC,Open Sans,Arial,Hiragino Sans GB,Microsoft YaHei,STHeiti,WenQuanYi Micro Hei,SimSun, sans-serif',fontcolor:$('#signcolor').val()}))
                         var qrcode = $('#qrcode').empty().qrcode(opt);
                         wx&&ios&&qrcode.attr('href','weixin://viewimage/'+qrcode.find('img').attr('src'));
-                        $('#tipstxt').text('请先长按图片识别测试');
-                        $('body').scrollTop(1000)
+                        $('#tipstxt').text(wx?'长按图片进行识别测试':'分享给朋友吧~');
+                        swipeDown();
                     }else{
                         $.alert('手机或电话请至少填写一个')
                     }
@@ -174,6 +187,13 @@
                 }
             })
         })
+        //动画的方式向下滑动
+        function swipeDown(){
+        	if(win.scrollTop()+win.height()<body.height()-5){
+        		win.scrollTop(win.scrollTop()*1.1);
+        		setTimeout(arguments.callee,10);
+        	}
+    	}
     </script>
 </body>
 </html>
