@@ -147,23 +147,9 @@
                 $('.signbox')[this.checked?'removeClass':'addClass']('hide');
             })
             $('#createQrcode').on('click',function(){
-                var lname = $('#lname').val(),
-                fname=$('#fname').val(),
-                mob=$('#mob').val(),
-                tel=$('#tel').val(),
-                company=$('#company').val(),
-                title=$('#title').val(),
-                address=$('#address').val(),
-                website=$('#website').val(),
-                email=$('#email').val(),
-                birthday=$('#birthday').val(),
-                sign = $('#sign').val(),
-                color=$('#color').val(),
-                bgcolor=$('#bgcolor').val();
+                var lname = $('#lname').val(),fname=$('#fname').val(),mob=$('#mob').val(),tel=$('#tel').val(),company=$('#company').val(),title=$('#title').val(),address=$('#address').val(),website=$('#website').val(),email=$('#email').val(),birthday=$('#birthday').val(),sign = $('#sign').val(),color=$('#color').val(),bgcolor=$('#bgcolor').val();
                 if(lname&&fname){
-                    if(color == bgcolor){
-                        $.alert('二维码颜色和背景色不能相同')
-                    }else if(mob||tel){
+                    if(mob||tel){
                         var vcf = 'BEGIN:VCARD\r\nN:'+lname+';'+fname+';;;\r\nFN: '+fname+'  '+lname;
                         if(title) vcf+='\r\nTITLE:'+title;
                         if(address) vcf+='\r\nADR;HOME:;;'+address+';;;;';
@@ -181,7 +167,7 @@
                         $('#tipstxt').text('请先长按图片识别测试');
                         $('body').scrollTop(1000)
                     }else{
-                        $.alert('电话至少填写一个')
+                        $.alert('手机或电话请至少填写一个')
                     }
                 }else{
                     $.alert('姓名信息必须填写')
